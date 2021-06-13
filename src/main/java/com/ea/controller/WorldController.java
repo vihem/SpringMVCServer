@@ -1,5 +1,6 @@
 package com.ea.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.ea.service.WorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,8 @@ public class WorldController {
     @RequestMapping(value = "/city", method = RequestMethod.GET)
     public String getCity(){
         System.out.println("getCity()========================");
-        return Arrays.toString(worldService.getCity().toArray());
+//        return Arrays.toString(worldService.getCity().toArray());
+        return JSON.toJSONString(worldService.getCity());
     }
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
