@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.ea.service.WorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Arrays;
 
 @Controller
+@CrossOrigin    //解决跨域问题
 public class WorldController {
 
     private final WorldService worldService;
